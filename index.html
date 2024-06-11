@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage hw</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 1 -->
+    <div class="cont">
+        <div class="todo-cont">
+            <h1 class="todo-title">Todo list</h1>
+            <div class="input-cont">
+                <input type="text"><button>Add task</button>
+            </div>
+            <ul class="todo-list"></ul>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <h1>Форма збереження даних</h1>
+    <form id="formData">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Зберегти</button>
+    </form>
+
+    <div id="savedData"></div>
+
+
+    <!-- 3 -->
+    <h1>Закладки</h1>
+
+    <div id="bookmarksList">
+        </div>
+
+    <form id="addBookmarkForm">
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" required><br>
+        <label for="title">Назва:</label>
+        <input type="text" id="title" name="title" required><br>
+        <button type="submit">Додати закладку</button>
+    </form>
+
+    <!-- 4 -->
+    <h1>Контакти</h1>
+
+    <div id="contactsList"></div>
+
+    <button onclick="addContact()">Додати контакт</button>
+
+    <div id="contactForm" style="display: none;">
+        <h2>Новий контакт</h2>
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <button type="button" onclick="saveContact()">Зберегти</button>
+        <button type="button" onclick="cancelContact()">Відміна</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
